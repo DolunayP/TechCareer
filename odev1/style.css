@@ -1,0 +1,427 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+}
+
+.page-section {
+    padding: 6rem 0;
+}
+
+/** -----------Navbar --------- **/
+.navbar {
+    height: 104px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: rgba(44, 62, 80);
+    color: white;
+    font-weight: bold;
+    padding-inline: 8%;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    transition: all 300ms ease-in;
+}
+
+.navbar.scrolled {
+    height: 74px;
+}
+
+.nav-left {
+    font-size: 28px;
+    margin-block: auto;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.nav-right ul {
+    display: flex;
+    gap: 16px;
+}
+
+.nav-right ul li a {
+    cursor: pointer;
+    padding: 4px;
+    color: white;
+    transition: 300ms all ease-in;
+}
+
+.nav-right ul li a:hover {
+    color: rgba(26, 188, 156, 0.75);
+
+}
+
+/* -------Hero Section ------- */
+.hero-section {
+    height: 100vh;
+    background-color: rgba(26, 188, 156);
+}
+
+.hero {
+    margin-top: 104px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.hero-img {
+    width: 15rem;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    text-align: center;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    text-transform: uppercase;
+}
+
+.hero-subhead {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.divider-container {
+    margin: 1.25rem 0 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    background-color: white;
+    width: 100%;
+    max-width: 7rem;
+    height: 0.25rem;
+    border-radius: 1rem;
+    border-color: #fff;
+}
+
+.divider.left {
+    margin-right: 1rem;
+}
+
+.divider.right {
+    margin-left: 1rem;
+}
+
+.divider-container .star svg {
+    height: 1.5rem;
+    display: inline-block;
+    font-size: 2rem;
+}
+
+.divider-container .star svg path {
+    font-size: 2rem;
+}
+
+.portfolio .divider,
+.contact .divider {
+    background-color: rgba(44, 62, 80);
+}
+
+/* ------ Portfolio Section-------- */
+.portfolio {
+    text-align: center;
+    max-width: 1080px;
+    margin: auto;
+}
+
+.portfolio h2 {
+    color: rgba(44, 62, 80);
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.portfolio-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1.8rem;
+}
+
+.portfolio-card {
+    width: 340px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+}
+
+.hover-layer {
+    background-color: rgba(26, 188, 156, 0.75);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: 250ms all ease-in;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 4rem;
+}
+
+.portfolio-card:hover .hover-layer {
+    opacity: 1;
+}
+
+.portfolio-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* ------------- */
+.about-section {
+    background-color: rgba(26, 188, 156);
+}
+
+.about {
+    text-align: center;
+    color: white;
+    font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.about h2 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    text-transform: uppercase;
+}
+
+.about-text-container {
+    display: flex;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 0.3;
+    font-size: 1.25rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.about-text.left {
+    margin-left: auto;
+}
+
+.about-text.right {
+    margin-right: auto;
+}
+
+.btn-download {
+    color: white;
+    padding: 18px 24px;
+    border: 1px solid white;
+    border-radius: 8px;
+    transition: 500ms all;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 2rem;
+}
+
+.btn-download:hover {
+    color: black;
+    background-color: white;
+}
+
+/* ------Contact------- */
+
+.contact h2 {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 60%;
+}
+
+.form-container form {
+    width: 100%;
+    padding-inline: 5%;
+}
+
+.form-item-div {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.form-input {
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    height: 5rem;
+    line-height: 1.25;
+    display: block;
+    width: 100%;
+    font-weight: 400;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-bottom: 0.125rem solid #ced4da;
+    outline: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+label {
+    font-size: 1.5rem;
+    color: #6c757d;
+    display: inline-block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 1.5rem 0;
+    overflow: hidden;
+    text-align: start;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    pointer-events: none;
+    border: 0.125rem solid transparent;
+    transform-origin: 0 0;
+    transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out
+}
+
+.label-clicked {
+    opacity: 0.65;
+    transform: scale(0.65) translateY(-1.5rem) translateX(0rem);
+}
+
+.form-textarea {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    height: 10rem;
+    display: block;
+    width: 100%;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    outline: 0;
+    border-bottom: 0.125rem solid #ced4da;
+}
+
+.form-textarea~label {
+    top: -1.5rem;
+}
+
+.btn-submit {
+    border: 0;
+    color: white;
+    padding: 1rem 1.75rem;
+    font-size: 1.25rem;
+    background-color: rgba(26, 188, 156);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 300ms ease;
+}
+
+.btn-submit:hover {
+    background-color: rgb(10, 109, 89);
+    color: white;
+}
+
+
+
+/* -------Footer ------ */
+.footer {
+    background-color: rgba(44, 62, 80);
+    padding-inline: 8%;
+    color: #fff;
+    padding-block: 5rem;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.footer h4 {
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+}
+
+.footer-location {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+}
+
+.footer-location p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.footer-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+}
+
+.footer-about p {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.footer-about p a {
+    color: rgba(26, 188, 156, 0.75);
+    text-decoration: underline;
+}
+
+.footer-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 0.3;
+}
+
+.btn-social {
+    border-radius: 100%;
+    display: inline-flex;
+    width: 3.25rem;
+    height: 3.25rem;
+    font-size: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid silver;
+    color: #fff;
+    transition: 200ms all ease-in;
+}
+
+.btn-social:hover {
+    background-color: #fafafa;
+    color: black;
+}
