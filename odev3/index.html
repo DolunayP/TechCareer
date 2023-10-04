@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            list-style: none;
+        }
+
+        .table {
+            border: 1px solid black;
+        }
+
+        .table-header {
+            font-size: 1.1rem;
+        }
+
+        .table-header th {
+            border: 1px solid black;
+            margin-inline: 8px;
+            padding: 8px;
+        }
+
+        .table-line {
+            text-align: center;
+        }
+
+        .table-line td {
+            border-bottom: 1px solid black;
+        }
+
+        .delete-button {
+            background-color: red;
+            color: white;
+            border: 0;
+            font-size: 1.2em;
+            cursor: pointer;
+            outline: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin: auto;
+            padding: 3px 8px;
+        }
+
+        body {
+            display: flex;
+            gap: 40px;
+            overflow-x: hidden;
+        }
+
+        .sort-btn {
+            border: 0;
+            outline: 0;
+            background: black;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        .sort-btn:hover {
+            scale: 0.98;
+            background: #3b3b3b;
+        }
+
+        .dropdown {
+            display: none;
+            background-color: black;
+            color: #fff;
+            width: 100%;
+            padding: 8px;
+            border-radius: 12px;
+        }
+
+        .dropdown li {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            padding: 4px;
+            cursor: pointer;
+            transition: 200ms all ease-in;
+            border-radius: 8px;
+        }
+
+        .dropdown li:hover {
+            background-color: #494949;
+        }
+
+        .dropdown.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table class="table">
+        <thead>
+            <tr class="table-header">
+                <th>ID</th>
+                <th>Name</th>
+                <th>Unit Price</th>
+                <th>Stock</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody class="t-body">
+
+        </tbody>
+
+    </table>
+
+    <div>
+        <button class="sort-btn">Sıralama</button>
+        <ul class="dropdown">
+            <li>100</li>
+            <li>200</li>
+            <li>300</li>
+            <li>400</li>
+        </ul>
+    </div>
+</body>
+
+
+<script src="main.js"></script>
+
+</html>
